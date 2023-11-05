@@ -7,7 +7,7 @@ class LoginApi {
   Future<Login> getDatalogin() async {
     final dio = Dio(BaseOptions(validateStatus: (status) => true));
     final response = await dio.request(
-        "${dotenv.env['RPTI_API_URL']}/api/auth/login?email=registro@mail.com&password=eiT55fAJWd",
+        "${dotenv.env['RPTI_API_URL']}/api/auth/login?email=${dotenv.env['RPTI_API_USUARIO']}&password=${dotenv.env['RPTI_API_PASSWORD']}",
         options: Options(method: 'POST'));
 
     print("response desde apiLogin");
