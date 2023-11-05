@@ -1,16 +1,14 @@
-# rpti_app
+# RPTI APP
 
-A new Flutter project.
+## Requerimientos
+- [Configurar entorno de desarrollo para flutter](https://docs.flutter.dev/get-started/install)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Configuraciones previas
+Crear archivo .env con las siguiente variables:
 
-A few resources to get you started if this is your first Flutter project:
+- RPTI_API_URL: Url de la api
+- RPTI_API_USUARIO: Usuario temporal para acceder sin login
+- RPTI_API_PASSWORD: Password de usuario temporal para acceder sin login
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Descargar las dependencias del proyecto
