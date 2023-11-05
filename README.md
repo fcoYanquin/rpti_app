@@ -12,3 +12,4 @@ Crear archivo .env con las siguiente variables:
 - RPTI_API_PASSWORD: Password de usuario temporal para acceder sin login
 
 Descargar las dependencias del proyecto
+`flutter pub get`
