@@ -1,17 +1,17 @@
 class Registro {
-  final int regId;
-  final int regNumeroCbr;
-  final int regFojasCbr;
-  final int regVtaCbr;
-  final int regAnioCbr;
-  final String comNombre;
-  final String regNombres;
-  final String regApellidoPaterno;
-  final String regApellidoMaterno;
-  final int regFojasRpti;
-  final int regVtaRpti;
-  final int regNumeroRpti;
-  final String regAnioRpti;
+  final int? regId;
+  final int? regNumeroCbr;
+  final int? regFojasCbr;
+  final int? regVtaCbr;
+  final int? regAnioCbr;
+  final String? comNombre;
+  final String? regNombres;
+  final String? regApellidoPaterno;
+  final String? regApellidoMaterno;
+  final int? regFojasRpti;
+  final int? regVtaRpti;
+  final int? regNumeroRpti;
+  final String? regAnioRpti;
 
   Registro({
     required this.regId,

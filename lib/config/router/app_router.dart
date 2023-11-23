@@ -4,6 +4,7 @@ import 'package:rpti_app/presentation/screens/login/login_screen.dart';
 import 'package:rpti_app/presentation/screens/home_screen.dart';
 import 'package:rpti_app/presentation/screens/lista_registros_screen.dart';
 import 'package:rpti_app/presentation/screens/registro_screen.dart';
+import 'package:rpti_app/presentation/screens/resultado_inscripcion_screen.dart';
 import 'package:rpti_app/presentation/screens/scanner_screen.dart';
 
 // GoRouter configuration
@@ -47,5 +48,11 @@ final appRouter = GoRouter(
       name: ScannerScreen.name,
       builder: (context, state) => const ScannerScreen(),
     ),
+    GoRoute(
+      path: '/resultado',
+      name: ResultadoInscripcionScreen.name,
+      builder: (context, state) => const ResultadoInscripcionScreen(),
+    ),
+
   ],
 );

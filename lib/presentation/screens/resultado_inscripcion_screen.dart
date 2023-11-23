@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rpti_app/domain/entities/registro.dart';
+import 'package:rpti_app/presentation/providers/busqueda_registros_provider.dart';
 import 'package:rpti_app/presentation/providers/login_provider.dart';
-import 'package:rpti_app/presentation/providers/registros_provider.dart';
-import 'package:rpti_app/presentation/widgets/shared/custom_bottom_navigation.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rpti_app/presentation/widgets/shared/custom_bottom_navigation.dart';
 
-class ListaRegistrosScreen extends ConsumerWidget {
-  static const String name = 'lista_registros_screen';
+class ResultadoInscripcionScreen extends ConsumerWidget {
+  static const String name = 'resultado_inscripcion_screen';
 
-  const ListaRegistrosScreen({super.key});
+  const ResultadoInscripcionScreen({
+    super.key,
+  });
 
-  @override
+    @override
   Widget build(BuildContext context, WidgetRef ref) {
+
+    String token = ref.watch(tokenProvider);
+    List<Registro> registros = ref.watch(busquedaRegistrosProvider);
+
     final colors = Theme.of(context).colorScheme;
     final size = MediaQuery.of(context).size;
 
-    List<Registro> registros = ref.watch(registrosProvider);
-    String token = ref.watch(tokenProvider);
-
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Inscripciones desactualizadas",
+        title: const Text("Registros Encontrados",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         backgroundColor: colors.primary,
         iconTheme: const IconThemeData(color: Colors.white),
@@ -34,6 +37,10 @@ class ListaRegistrosScreen extends ConsumerWidget {
               child: GestureDetector(
                 onTap: () {
                   //ref.read(registroProvider.notifier).state = "${registros[index].regId}";
+
+                  print('/registro/${registros[index].regId}/$token');
+
+                  print(registros[index]);
 
                   context.replace('/registro/${registros[index].regId}/$token');
                   //print("Nueva pantalla");
@@ -120,5 +127,6 @@ class ListaRegistrosScreen extends ConsumerWidget {
           }),
       bottomNavigationBar: const CustomBottomNavigation(),
     );
+
   }
 }

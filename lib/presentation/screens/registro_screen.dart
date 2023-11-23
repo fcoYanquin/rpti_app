@@ -150,7 +150,7 @@ class RegistroScreenState extends ConsumerState<RegistroScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              registro.comNombre,
+                              registro.comNombre!,
                               style: const TextStyle(fontSize: 17),
                             ),
                             const SizedBox(
@@ -171,7 +171,7 @@ class RegistroScreenState extends ConsumerState<RegistroScreen> {
                               height: 5,
                             ),
                             Text(
-                              registro.regAnioRpti,
+                              registro.regAnioRpti!,
                               style: const TextStyle(fontSize: 17),
                             ),
                             const SizedBox(
