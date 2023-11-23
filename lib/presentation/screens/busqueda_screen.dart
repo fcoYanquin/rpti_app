@@ -82,8 +82,12 @@ class BusquedaScreen extends ConsumerWidget {
 
                     print("Buscando...");
 
+                    //TODO: Validar que todos lo campos esten ingresados:
                     var data = FormData.fromMap({
-                      'numero': _rptiController.text
+                      'foja': _fojaController.text,
+                      'numero': _rptiController.text,
+                      'anio_inscripcion': _anioController.text,
+                      'comuna': _comunaController.text
                     });
 
 
